@@ -138,6 +138,37 @@ The application provides a responsive chat interface designed to work across dif
 The production application is deployed using **Firebase Hosting**.
 
 ---
+## 📸 Screenshots
+
+### 💬 Chat Interface
+
+![Chat Interface](screenshots/chat.png)
+
+---
+
+### 🔐 Authentication
+
+![Authentication](screenshots/login.png)
+
+---
+
+### 🔎 User Search
+
+![User Search](screenshots/search.png)
+
+---
+
+### 👤 Profile Management
+
+![Profile Management](screenshots/profile.png)
+
+---
+
+### 📷 Image Sharing
+
+![Image Sharing](screenshots/image-sharing.png)
+
+---
 
 ## 🛠️ Tech Stack
 
