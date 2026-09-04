@@ -172,7 +172,7 @@
 }
 
 .r-msg {
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: flex-start;
 }
 
@@ -213,7 +213,7 @@
 }
 
 .r-msg .msg-wrapper {
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 
 /* =========================================================
