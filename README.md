@@ -169,6 +169,19 @@ The production application is deployed using **Firebase Hosting**.
 ![Image Sharing](screenshots/image-sharing.png)
 
 ---
+## ⭐ Highlights
+
+- 💬 Real-time one-to-one messaging using Firebase Firestore
+- 🔐 Firebase Authentication for secure user access
+- 🔎 Real-time user search
+- 🟢 Online and offline user status
+- ⌨️ Real-time typing indicator
+- 📷 Image sharing using Cloudinary
+- 👤 User profile management
+- 🌙 Clean and responsive dark-themed interface
+- ⚡ Fast frontend built with React and Vite
+- ☁️ Deployed using Firebase Hosting
+---
 
 ## 🛠️ Tech Stack
 
