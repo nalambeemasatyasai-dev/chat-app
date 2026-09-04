@@ -1,8 +1,75 @@
-# React + Vite
+# 💬 Chat App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern real-time chat application built with **React.js, Vite, Firebase, and Cloudinary**. The application provides secure user authentication, real-time messaging, profile management, typing indicators, online status, and image sharing through a clean and responsive interface.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Live Application:**  
+https://chat-app-eb890.web.app
+
+---
+
+## ✨ Features
+
+- 🔐 User registration and login
+- 💬 Real-time one-to-one messaging
+- ⚡ Real-time message updates using Firebase Firestore
+- 👤 User profile management
+- 🖼️ Profile image upload
+- 📷 Image sharing in chats
+- 🟢 Online/offline user status
+- ⌨️ Real-time typing indicator
+- 🔎 Search users
+- 🗑️ Chat and message management
+- 📱 Responsive user interface
+- ☁️ Firebase Hosting deployment
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+
+### Backend & Cloud Services
+
+- Firebase Authentication
+- Firebase Firestore
+- Cloudinary
+- Firebase Hosting
+
+### Development Tools
+
+- Git
+- GitHub
+- npm
+- Firebase CLI
+- Visual Studio Code
+
+---
+
+## 🏗️ Application Architecture
+
+```text
+                         ┌─────────────────┐
+                         │      User       │
+                         └────────┬────────┘
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │  React + Vite   │
+                         │    Frontend     │
+                         └────────┬────────┘
+                                  │
+                    ┌─────────────┼─────────────┐
+                    │             │             │
+                    ▼             ▼             ▼
+             ┌────────────┐ ┌────────────┐ ┌────────────┐
+             │  Firebase  │ │  Firestore │ │ Cloudinary │
+             │    Auth    │ │  Database  │ │   Images   │
+             └────────────┘ └────────────┘ └────────────┘
