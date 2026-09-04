@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // 1. Users collection
+    // Authenticated users can search and view profiles (username, name, avatar, bio)
+    // Only the profile owner can create or update their own profile document
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create, update: if isOwner(userId);
+      allow delete: if false;
+    }
+
+    // 2. Chats collection
+    // Users can read their own chats document
+    // Chat documents are updated by the user or their chat partner (to update lastMessage, messageSeen, updatedAt)
+    match /chats/{userId} {
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId);
+      allow update: if isAuthenticated();
+      allow delete: if false;
+    }
+
+    // 3. Messages collection
+    // Authenticated users can create message rooms and read messages
+    // Updates (sending messages, Delete for Me, Delete for Everyone) require authentication
+    // and cannot decrease the messages array size (preventing hard deletion of message history)
+    match /messages/{messageId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated()
+        && request.resource.data.messages.size() >= resource.data.messages.size();
+      allow delete: if false;
+    }
+
+    // 4. Typing presence collection
+    // Temporary status tracking typing indicators per chat
+    match /typing/{messageId} {
+      allow read, write: if isAuthenticated();
+    }
+  }
+}

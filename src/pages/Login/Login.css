@@ -1,0 +1,73 @@
+.login{
+    min-height: 100vh;
+    background: url(/background.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.login .logo{
+    width: max(20vw,200px);
+}
+.login-form{
+    background: #0b192c; /* Changed to dark navy/slate */
+    color: #ffffff; /* Added white text for general form elements */
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    border: 1px solid #1e3a5f; /* Added a subtle matching border */
+}
+.login-form h2{
+    font-weight: 500;
+    color: #ffffff; /* Ensured heading is white */
+}
+.form-input{
+    padding: 8px 10px;
+    background-color: #0f203b; /* Darker input background */
+    border: 1px solid #1e3a5f; /* Matching dark border */
+    color: #ffffff; /* White text typed into inputs */
+    border-radius: 4px;
+    outline-color: #077EFF;
+}
+/* Optional: style placeholder text to be visible on dark background */
+.form-input::placeholder {
+    color: #8a9ba8;
+}
+.login-form button{
+    padding: 10px;
+    background-color: #077EFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.login-term{
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+    color: #a0aec0; /* Lightened for readability */
+}
+.login-toggle{
+    font-size: 13px;
+    color: #cbd5e0; /* Lightened for readability */
+}
+.login-toggle span{
+    font-weight: 500;
+    color: #38bdf8; /* Brighter blue for contrast on dark background */
+    cursor: pointer;
+}
+.login-forgot{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+@media (max-width:768px) {
+    .login{
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+}

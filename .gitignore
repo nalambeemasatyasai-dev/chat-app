@@ -1,0 +1,8 @@
+﻿node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+.firebase/
+src/config/firebase.backup.js
+src/lib/upload.backup.js
